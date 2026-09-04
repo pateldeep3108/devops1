@@ -2,30 +2,25 @@ pipeline {
     agent any
 
     stages {
+        stage('Clone') {
+            steps {
+                echo 'https://github.com/pateldeep3108/devops1.git'
+            }
+        }
+
         stage('Build') {
             steps {
-                echo 'Building the project...'
-                sh 'echo Build Successful'
+                echo 'Building application...'
             }
         }
 
         stage('Test') {
             steps {
-                echo 'Testing the project...'
-                sh 'echo Test Successful'
-            }
-        }
-
-        stage('Deploy') {
-            steps {
-                echo 'Deploying the project...'
-                sh 'echo Deployment Successful'
+                echo 'Testing application...'
             }
         }
     }
 }
-
-
 
 
 
