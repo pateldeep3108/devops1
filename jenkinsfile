@@ -2,9 +2,21 @@ pipeline {
     agent any
 
     stages {
+        stage('Clone') {
+            steps {
+                echo 'https://github.com/pateldeep3108/devops1.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building application...'
+            }
+        }
+
         stage('Test') {
             steps {
-                echo 'Jenkins is working!'
+                echo 'Testing application...'
             }
         }
     }
